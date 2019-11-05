@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        section.map_desc {
+            margin: 10%;
+            width: 80%;
+        }
+
+        p {
+            text-align: justify;
+            margin-left: 5%;
+            font: 12px sans-serif;
+            line-height: 150%
+        }
+
+        li {
+            margin-left: 10%;
+            text-align: justify;
+            font: 12px sans-serif;
+            line-height: 150%
+        }
+
+        section.map_body {
+            margin-top: 5%;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        #slider {
+            margin-bottom: 20px;
+        }
+
+        path:hover {
+            fill-opacity: .65;
+        }
+
+        div#tooltip {
+            position: absolute;
+            text-align: left;
+            padding-left: 4px;
+            background: black;
+            color: white;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        body {
+            font: 11px sans-serif;
+            background-color: white;
+            color: dimgrey;
+        }
+
+        .legend {
+            top: 350px;
+            text-align: center;
+            float: right;
+            margin-right: 5%;
+        }
+
+        button {
+            width: 30px;
+            height: 30px;
+            padding: 6px 0;
+            font-size: 10px;
+            line-height: 1.428571429;
+            border-style: solid;
+            border-radius: 15px;
+            margin: 5px;
+            background-color: dimgrey;
+            color: whitesmoke;
+            border: none;
+        }
+
+        button:hover {
+            outline: none;
+            background-color: palevioletred;
+            color: whitesmoke;
+        }
+
+        .clicked {
+            outline: none;
+            border: none;
+            background-color: palevioletred;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="map_body">
+        <div id="slider" style="margin-top:15px;">
+            <button class="unclicked" id="2002" value="2002" onclick="mapChange(this.value)">2002</button>
+            <button class="unclicked" id="2003" value="2003" onclick="mapChange(this.value)">2003</button>
+            <button class="unclicked" id="2004" value="2004" onclick="mapChange(this.value)">2004</button>
+            <button class="unclicked" id="2005" value="2005" onclick="mapChange(this.value)">2005</button>
+            <button class="unclicked" id="2006" value="2006" onclick="mapChange(this.value)">2006</button>
+            <button class="unclicked" id="2007" value="2007" onclick="mapChange(this.value)">2007</button>
+            <button class="unclicked" id="2008" value="2008" onclick="mapChange(this.value)">2008</button>
+            <button class="unclicked" id="2009" value="2009" onclick="mapChange(this.value)">2009</button>
+            <button class="unclicked" id="2010" value="2010" onclick="mapChange(this.value)">2010</button>
+            <button class="unclicked" id="2011" value="2011" onclick="mapChange(this.value)">2011</button>
+        </div>
+        <div id="tooltip"></div>
+        <div id="map"></div>
+        <div class="legend">
+            <table>
+                <tr>
+                    <td width="100" , height="15" style="background-color: #007D2A"></td>
+                    <td><span>> 0.65 </span></td>
+                </tr>
+
+                <tr>
+                    <td width="100" , height="15" style="background-color: #2BAA56"></td>
+                    <td><span>0.60 - 0.65</span></td>
+                </tr>
+                <tr>
+                    <td width="100" , height="15" style="background-color: #E8943B"></td>
+                    <td><span>0.55 - 0.60</span></td>
+                </tr>
+                <tr>
+                    <td width="100" , height="15" style="background-color: #C53272"></td>
+                    <td><span>0.50 - 0.55</span></td>
+                </tr>
+                <tr>
+                    <td width="100" , height="15" style="background-color: #91003F"></td>
+                    <td><span> < 0.50</span></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+
+
+    <section class="map_desc">
+        <div>
+            <p>
+                <b> Welcome to upLocs!</b>
+                We designed this visualization tool for helping people explore and discover potential locations (states) to launch startups. This tool enables people to quickly review
+                <b> the three-year survival rates </b>
+                of the startups launched in a state in a given year. For example, in 2011, the survival rate of the launched startups in California was 0.60, which means only 60% of startups survived after being launched three years (by 2014).
+            </p>
+
+            <p>
+                Our tool also helps users make sense of other relevant information that they might need to consider before launching a startup, such as:
+            </p>
+
+            <li> <b>Three-year Venture Capital Dollars</b> (average): esitmated based on the dataset shared by State Science & Technology Institute (SSTI);</li>
+            <li> <b>Three-year Research Expenses</b> (average): esitmated based on the Delta dataset shared by Integrated Postsecondary Education Data System (IPEDS);</li>
+            <li> <b>Three-year State Subsidies</b> (average): esitmated based on the dataset shared by Bureau of Economic Analysis (BEA);</li>
+            <li> <b>Three-year Number of Institutions</b> (average): esitmated based on the dataset shared by IPEDS;</li>
+            <li> <b>Three-year Annual Income</b> (average): esitmated based on the dataset collected by the U.S. Cluster Mapping Project led by Harvard Business School’s Institute for Strategy and Competitiveness.</li>
+
+            <P><b>Click a state!</b> You will see more information.</P>
+
+        </div>
+    </section>
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="map.js"></script>
+</body>
+
+</html>

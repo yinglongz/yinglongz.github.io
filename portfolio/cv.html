@@ -1,0 +1,380 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="Home.css">
+  <title>My CV</title>
+  <style>
+    #left {
+      width: 40%;
+      float: left;
+    }
+
+    #right {
+      width: 50%;
+      float: right;
+    }
+
+    .school {
+      font-weight: bold;
+    }
+
+    .year,
+    .degree {
+      font-weight: lighter;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    h3 {
+      padding-top: 20px;
+      font-size: 18pt;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+
+    .des {
+      font-style: italic;
+    }
+
+    .job {
+      font-weight: bold;
+    }
+
+    .researchSkills {
+      font-weight: bold;
+    }
+
+    .myname {
+      font-weight: bold;
+    }
+
+    .publisher {
+      font-style: italic;
+    }
+
+    .labels {
+      margin: 0px;
+      padding: 0;
+    }
+
+    .labels li {
+      display: inline;
+      padding-right: 20px;
+      padding: 4px 7px;
+      font-size: 8pt;
+      color: #3D3945;
+      background-color: #DFDFE4;
+    }
+
+    .pi {
+      color: #0278AD;
+    }
+
+    .pdf a {
+      color: #ED3860;
+    }
+
+    .myname {
+      font-weight: bolder;
+      color: black;
+    }
+  </style>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61642400-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-61642400-1');
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="cv.html" class="current">CV</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+
+  <div id="contain">
+
+    <div id="left">
+      <div id="personal_inf">
+        <h2>Curriculum Vitae</h2>
+        <h4>Yinglong Zhang</h4>
+        <p><span>100 Manning Hall<br>Chapel Hill, NC<br>yinglong@unc.edu</span></p>
+      </div>
+      <hr>
+
+      <section id="Education">
+        <h3>Education</h3>
+        <div id="unc">
+          <p>
+            <span clas="year">8/2015 - 12/2019 (Expected)<br></span>
+            <span class="school">University of North Carolina at Chapel Hill<br></span>
+            <span class="degree">PhD Student</span>
+          </p>
+
+        </div>
+
+        <div id="UT">
+          <p>
+            <span class="year">8/2013 - 5/2015<br></span>
+            <span class="school">University of Texas at Austin<br></span>
+            <span class="degree">Master of Science in Information Studies<br></span>
+          </p>
+
+        </div>
+
+        <div id="jh">
+          <p>
+            <span class="year">9/2006 - 5/2010<br></span>
+            <span class="school">Jianghan University<br></span>
+            <span id="degree">Bachelor of Science in Applied Psychology<br>Bachelor of Engineering in Computer Science and Technology</span>
+          </p>
+        </div>
+      </section>
+
+      <section id="Work">
+        <h3>Work Experience</h3>
+        <p>
+          <span class="year">6/2018 - 9/2018<br></span>
+          <span class="job">Quantitative User Experience Research Intern<br></span>
+          <span class="school"><b>Google</b>, Mountain View, CA<br></span>
+        </p>
+
+        <p>
+          <span class="year">5/2017 - 8/2017<br></span>
+          <span class="job">Quantitative User Experience Research Intern<br></span>
+          <span class="school"><b>Google</b>, Mountain View, CA<br></span>
+        </p>
+      </section>
+
+
+
+      <section id="Research">
+        <h3>Research Experience</h3>
+        <p>
+          <span class="year">2017 - 2019<br></span>
+          <span class="job">Research Assistant<br></span>
+          <span class="des">OSSArcFlow: Researching Archival Workflows for Born - Digital Content</span>, PI: <a href="https://sils.unc.edu/people/faculty/profiles/Cal-Lee" class="pi" target="_blank">Dr. Christopher Lee</a>
+        </P>
+
+        <p>
+          <span class="year">2016 - 2017<br></span>
+          <span class="job">Research Assistant<br></span>
+          <span class="des">Knowledge Representation and Re-Use for Exploratory and Collaborative Search</span>, PI: <a href="http://www.ils.unc.edu/~rcapra/" class="pi" target="_blank">Dr. Robert Capra</a>
+        </p>
+
+        <p>
+          <span class="year">2013 - 2015<br></span>
+          <span class="job">Research Assistant<br></span>
+          <span class="des">Continuous Assessment of Cognitive Load in Information Seeking</span>, PI: <a href="https://www.ischool.utexas.edu/~jacekg/" class="pi" target="_blank">Dr. Jacek Gwizdka</a>
+        </p>
+      </section>
+
+      <section id="SKills">
+        <h3>Skills</h3>
+        <p>
+          <span class="researchSkills">Qualitative Methods:</span><span> eye-tracking, diary study, surveys, usability testing, interviews.</span>
+        </p>
+
+        <p>
+          <span class="researchSkills">Quantitative Methods:</span><span> large-scale log analysis, experimental design, text mining, data mining, eye
+movement analysis, multilevel modeling, survival analysis, Bayesian analysis, psychometrics.</span>
+        </p>
+
+        <p>
+          <span class="researchSkills">Software:</span>
+          <ul>
+            <li><span class="researchSkills">Data Analysis:</span> R, Stan, Python, SQL, SPSS</li>
+            <li><span class="researchSkills">Prototyping:</span> Axure</li>
+            <li><span class="researchSkills">Usability Testing:</span> Morae, Camtasia</li>
+            <li><span class="researchSkills">Eye Tracking:</span> Tobii</li>
+            <li><span class="researchSkills">Survey design:</span> Qualtrics</li>
+            <li><span class="researchSkills">Web development:</span> HTML, JavaScript, PHP</li>
+          </ul>
+        </p>
+      </section>
+    </div>
+
+    <div id="right">
+      <section id="publications">
+        <h3>Publications</h3>
+        <div>
+          <span>Crescenzi, Anita; Li, Yuan;</spna><span class="myname"> Zhang, Y.</span><span>, Capra, R.</span>
+          <span>(2019). Towards Better Support for Exploratory Search through an Investigation of Notes-to-self and Notes-to-share. In</span>
+          <span class="publisher">Proceedings of the 42nd International ACM SIGIR conference on Research and Development in Information Retrieval ACM, 2019</span>.
+          <span class="pdf">[<a href="pdfs/p1093-crescenzi.pdf" target="_blank">PDF</a >]</span>
+        </div>
+        <ul class="labels">
+          <li class="search_behavior">Web Search</li>
+        </ul>
+        <br>
+
+
+        <div>
+          <span class="myname">Zhang, Y.</span><span>, Capra, R. </span>
+          <span>(2019). (2019). Understanding how people use search to support their everyday creative tasks. In</span>
+          <span class="publisher">Proceedings of the 2019 ACM on Conference on Human Information Interaction and Retrieval, 2019</span>.
+          <span class="pdf">[<a href="pdfs/Zhang_chiir_19.pdf" target="_blank">PDF</a >]</span>
+        </div>
+        <ul class="labels">
+          <li class="Creativity">Creativity</li>
+          <li class="search_behavior">Web Search</li>
+          <li class="bayesian_analysis">Bayesian Analysis</li>
+          <li class="crowdsourcing">Crowdsourcing</li>
+        </ul>
+        <br>
+
+        <div>
+          <span class="myname">Zhang, Y.</span>
+          <span>(2018, March). Creative Search: Using Search to Leverage Your Everyday Creativity. In</span>
+          <span class="publisher">Proceedings of the 2018 ACM on Conference on Human Information Interaction and Retrieval</span> (Doctoral Consortium).
+          <span class="pdf">[<a href="pdfs/p366-zhang.pdf" target="_blank">PDF</a >]</span>
+        </div>
+        <ul class="labels">
+          <li class="Creativity">Creativity</li>
+          <li class="search_behavior">Web Search</li>
+        </ul>
+        <br>
+
+
+        <div>
+          <span>Capra, R., Arguello, J., </span><span class="myname">Zhang, Y.</span>
+          <span>(2017, April). The Effects of Search Task Determinability on Search Behavior. In </span>
+          <span class="publisher">European Conference on Information Retrieval (pp. 108-121)</span>
+          <span>. Springer, Cham. </span>
+          <span class="pdf">[<a href="pdfs/CapraECIR2017.pdf" target="_blank">PDF</a >]</span>
+          <ul class="labels">
+            <li class="search_behavior">Web Search</li>
+            <li class="crowdsourcing">Crowdsourcing</li>
+          </ul>
+        </div>
+        <br>
+
+        <div>
+          <span class="myname">Zhang, Y.</span>
+          <span>, Gwizdka, J. (2016). Rethinking the Cost of Information Search Behavior. In </span>
+          <span class="publisher">Proceedings of SIGIR '16</span>
+          <span>. New York, New York, USA: ACM Press. </span>
+          <span class="pdf">[<a href="pdfs/spr263-zhang.pdf" target="_blank">PDF</a >]</span>
+          <ul class="labels">
+            <li class="eyetracking">Eye tracking</li>
+            <li class="psychometrics">Psychometrics</li>
+            <li class="user_modeling">User Modeling</li>
+            <li class="search_behavior">Web Search</li>
+          </ul>
+        </div>
+        <br>
+
+        <div>
+          <span>K Brennan, D Kelly, </span><span class="myname">Zhang, Y.</span>
+          <span>(2016) Factor Analysis of a Search Self-Efficacy Scale. In </span>
+          <span class="publisher">Proceedings of the 2016 ACM on Conference on Human Information Interaction and Retrieval (CHIIR '16)</span>
+          <span>ACM, New York, NY, USA, 241-244.</span>
+          <span class="pdf">[<a href="pdfs/brennan_chiir2016.pdf" target="_blank">PDF</a>]</span>
+          <ul class="labels">
+            <li class="psychometrics">Psychometrics</li>
+            <li class="search_behavior">Web Search</li>
+          </ul>
+        </div>
+        <br>
+
+
+        <div>
+          <span>Gwizdka, J., </span><span class="myname">Zhang, Y.</span>
+          <span>(2015) Differences in Eye-Tracking Measures Between Visits and Revisits to Relevant and Irrelevant Web Pages. In </span>
+          <span class="publisher">Proceedings of SIGIR '15</span>
+          <span>(811-814).</span>
+          <span class="pdf">[<a href="pdfs/Gwizdka_sigir15.pdf" target="_blank">PDF</a>]</span>
+          <ul class="labels">
+            <li class="eyetracking">Eye tracking</li>
+            <li class="dataming">Data Mining</li>
+            <li class="search_behavior">Web Search</li>
+          </ul>
+        </div>
+        <br>
+
+        <div>
+          <span>Gwizdka, J., </span><span class="myname">Zhang, Y.</span>
+          <span>(2015) Towards Inferring Web Page Relevance — An Eye-Tracking Study. In</span>
+          <span class="publisher">iConference 2015</span>
+          <span>, Newport Beach, California, USA.</span>
+          <span class="pdf">[<a href="pdfs/Gwizdka_iconference15.pdf" target="_blank">PDF</a>]</span>
+          <ul class="labels">
+            <li class="eyetracking">Eye tracking</li>
+            <li class="dataming">Data Mining</li>
+            <li class="search_behavior">Web Search</li>
+          </ul>
+        </div>
+        <br>
+
+        <div>
+          <span class="myname">Zhang, Y.</span>
+          <span>, Zhang, J., Lease, M., & Gwizdka, J. (2014). Multidimensional relevance modeling via psychometrics and crowdsourcing. In </span>
+          <span class="publisher">Proceedings of SIGIR ’14</span>
+          <span>(pp. 435–444). New York, New York, USA: ACM Press.<br></span>
+          <span class="pdf">[<a href="pdfs/zhang-sigir14.pdf" target="_blank">PDF</a>]</span>
+          <ul class="labels">
+            <li class="psychometrics">Psychometrics</li>
+            <li class="user_modeling">User Modeling</li>
+            <li class="crowdsourcing">Crowdsourcing</li>
+          </ul>
+        </div>
+        <br>
+        <div>
+          <span class="myname">Zhang, Y.</span>
+          <span>, Gwizdka, J. (2014). Effects of Tasks at Similar and Different Complexity Levels. In </span>
+          <span class="publisher">Proceedings of ASIST 2014.</span>
+          <span class="pdf">[<a href="pdfs/Zhang_asist_14.pdf" target="_blank">PDF</a>]</span>
+          <ul class="labels">
+            <li class="search_behavior">Web Search</li>
+          </ul>
+        </div>
+        <br>
+
+        <div>
+          <span>Wei, X., </span><span class="myname">Zhang, Y.</span>
+          <span>, & Gwizdka, J. (2014). YASFIIRE: Yet Another System for IIR Evaluation In </span>
+          <span class="publisher">Proceedings of IIiX ’14</span>
+          <span>(pp. 316–319). New York, New York, USA: ACM Press. </span>
+          <span class="pdf">[<a href="pdfs/p316-wei_14.pdf" target="_blank">PDF</a>]</span>
+          <ul class="labels">
+            <li class="sys">System Design</li>
+          </ul>
+        </div>
+        <br>
+        <div>
+          <form>
+            <a href="pdfs/yz_cv.pdf" class="button" name="download">Download CV</a>
+          </form>
+        </div>
+      </section>
+    </div>
+
+
+
+
+  </div>
+
+
+</body>
+
+</html>

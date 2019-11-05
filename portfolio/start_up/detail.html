@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detial Informaiton </title>
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+
+        hr {
+            color: darkgray;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        h3 {
+            color: white;
+            background: grey;
+            margin-left: 10%;
+            margin-right: 10%;
+            width: 80px;
+            text-align: center;
+        }
+
+        #state_description {
+            color: grey;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: palevioletred;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: palevioletred;
+        }
+
+        #navigation_bar {
+            margin-left: 10%;
+            margin-top: 5%;
+            margin-bottom: 1%;
+        }
+
+        table {
+            width: 90%;
+            text-align: center;
+            margin-left: 10%;
+            margin-bottom: 50px;
+        }
+
+        td.left {
+            width: 40%;
+            height: auto;
+        }
+
+        td.right {
+            width: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navigation_bar">
+        <a href="Home.html">Survival Rate Map</a><span id="state_description">/</span>
+    </div>
+
+    <hr>
+    <h3>Funding</h3>
+    <table class="vc">
+        <tr>
+            <td></td>
+            <td>
+                <select onchange="vcMap(this.value)">
+                <option>year</option>
+                <option value="2002" class="wage">2002</option>
+                <option value="2003" class="wage">2003</option>
+                <option value="2004" class="wage">2004</option>
+                <option value="2005" class="wage">2005</option>
+                <option value="2006" class="wage">2006</option>
+                <option value="2007" class="wage">2007</option>
+                <option value="2008" class="wage">2008</option>
+                <option value="2009" class="wage">2009</option>
+                <option value="2010" class="wage">2010</option>
+                <option value="2011" class="wage">2011</option>
+                <option value="2012" class="wage">2012</option>
+                <option value="2013" class="wage">2013</option>
+                <option value="2014" class="wage">2014</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="left">
+                <canvas id="vc_state"></canvas>
+            </td>
+            <td class="right">
+                <canvas id="vcRadar"></canvas>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <h3>Cost</h3>
+    <table class="wage">
+        <tr>
+            <td>
+            </td>
+            <td>
+                <select onchange="wageMap(this.value)">
+                  <option>year</option>
+                  <option value="2002" class="wage">2002</option>
+                  <option value="2003" class="wage">2003</option>
+                  <option value="2004" class="wage">2004</option>
+                  <option value="2005" class="wage">2005</option>
+                  <option value="2006" class="wage">2006</option>
+                  <option value="2007" class="wage">2007</option>
+                  <option value="2008" class="wage">2008</option>
+                  <option value="2009" class="wage">2009</option>
+                  <option value="2010" class="wage">2010</option>
+                  <option value="2011" class="wage">2011</option>
+                  <option value="2012" class="wage">2012</option>
+                  <option value="2013" class="wage">2013</option>
+                  <option value="2014" class="wage">2014</option>
+              </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="left">
+                <canvas id="wage_state"></canvas>
+            </td>
+            <td class="right">
+                <canvas id="wageRadar"></canvas>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <h3>Resource</h3>
+    <table class="institution">
+        <tr>
+            <td></td>
+            <td>
+                <select onchange="institutionMap(this.value)">
+                  <option>year</option>
+                  <option value="2002" class="wage">2002</option>
+                  <option value="2003" class="wage">2003</option>
+                  <option value="2004" class="wage">2004</option>
+                  <option value="2005" class="wage">2005</option>
+                  <option value="2006" class="wage">2005</option>
+                  <option value="2007" class="wage">2007</option>
+                  <option value="2008" class="wage">2008</option>
+                  <option value="2009" class="wage">2009</option>
+                  <option value="2010" class="wage">2010</option>
+                  <option value="2011" class="wage">2011</option>
+                  <option value="2012" class="wage">2012</option>
+                  <option value="2013" class="wage">2013</option>
+              </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="left">
+                <canvas id="institution_state"></canvas>
+            </td>
+            <td class="right">
+                <canvas id="institutionRadar"></canvas>
+            </td>
+        </tr>
+    </table>
+    <table class="research">
+        <tr>
+            <td></td>
+            <td>
+                <select onchange="researchMap(this.value)">
+                  <option>year</option>
+                  <option value="2002" class="wage">2002</option>
+                  <option value="2003" class="wage">2003</option>
+                  <option value="2004" class="wage">2004</option>
+                  <option value="2005" class="wage">2005</option>
+                  <option value="2006" class="wage">2005</option>
+                  <option value="2007" class="wage">2007</option>
+                  <option value="2008" class="wage">2008</option>
+                  <option value="2009" class="wage">2009</option>
+                  <option value="2010" class="wage">2010</option>
+                  <option value="2011" class="wage">2011</option>
+                  <option value="2012" class="wage">2012</option>
+                  <option value="2013" class="wage">2013</option>
+              </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="left">
+                <canvas id="research_state"></canvas>
+            </td>
+            <td class="right">
+                <canvas id="researchRadar"></canvas>
+            </td>
+        </tr>
+    </table>
+    <table class="subsidies">
+        <tr>
+            <td></td>
+            <td>
+                <select onchange="subsidiesMap(this.value)">
+                  <option>year</option>
+                  <option value="2002" class="wage">2002</option>
+                  <option value="2003" class="wage">2003</option>
+                  <option value="2004" class="wage">2004</option>
+                  <option value="2005" class="wage">2005</option>
+                  <option value="2006" class="wage">2005</option>
+                  <option value="2007" class="wage">2007</option>
+                  <option value="2008" class="wage">2008</option>
+                  <option value="2009" class="wage">2009</option>
+                  <option value="2010" class="wage">2010</option>
+                  <option value="2011" class="wage">2011</option>
+                  <option value="2012" class="wage">2012</option>
+                  <option value="2013" class="wage">2013</option>
+                  <option value="2014" class="wage">2014</option>
+              </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="left">
+                <canvas id="subsidies_state"></canvas>
+            </td>
+            <td class="right">
+                <canvas id="subsidiesRadar"></canvas>
+            </td>
+        </tr>
+    </table>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="Chart.bundle.js"></script>
+    <script src="utils.js"></script>
+    <script src="plots.js"></script>
+</body>
+
+</html>
